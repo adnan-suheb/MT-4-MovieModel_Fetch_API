@@ -19,6 +19,9 @@ const trailerBtn = document.getElementById("trailerBtn");
 const info = document.getElementById("info");
 const close = document.getElementById("close");
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
 
 const snackBarMsg = (msg, icon, timer) => {
@@ -99,7 +102,7 @@ const movieArrTemplating = (arr) => {
                     <div class="overviewSec">
                         <h3>${ele.title}</h3>
                         <em>Overview</em>
-                        <p>${ele.overView}</p>
+                        <p data-toggle="tooltip" data-placement="top" title="${ele.overView}">${ele.overView}</p>
                             <div class="action">
                                 <button type="button" class="btn btn-outline-success" onclick="onEdit(this)" >Edit</button>
                                 <button type="button" class="btn btn-outline-danger" onclick="onDelete(this)">Delete</button>
@@ -207,7 +210,7 @@ const onUpdateBtn = () => {
             <div class="overviewSec">
                 <h3>${res.title}</h3>
                 <em>Overview</em>
-                <p>${res.overView}</p>
+                <p data-toggle="tooltip" data-placement="top" title="${res.overView}">${res.overView}</p>
                     <div class="action">
                         <button type="button" class="btn btn-outline-success" onclick="onEdit(this)" >Edit</button>
                         <button type="button" class="btn btn-outline-danger" onclick="onDelete(this)">Delete</button>
@@ -292,7 +295,7 @@ const createCard = (obj) => {
                                         <div class="overviewSec">
                                             <h3>${obj.title}</h3>
                                             <em>Overview</em>
-                                            <p>${obj.overView}</p>
+                                            <p data-toggle="tooltip" data-placement="top" title="${obj.overView}">${obj.overView}</p>
                                                 <div class="action">
                                                     <button type="button" class="btn btn-outline-success" onclick = "onEdit(this)">Edit</button>
                                                     <button type="button" class="btn btn-outline-danger" onclick = "onDelete(this)">Delete</button>

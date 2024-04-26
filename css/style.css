@@ -81,6 +81,11 @@ header{
     height: 70%;
     transition: all .4s ease-in-out;
 }
+.overviewSec p{
+    overflow: scroll;
+    width: 100%;
+    height: 60%;
+}
 
 .movieCard:hover .overviewSec,
 .movieCard:hover .overviewSec,
@@ -96,7 +101,6 @@ header{
     left: 0;
     right: 0;
     padding: 1.5rem;
-    background-color: #fff;
 }
 
 .backDrop{

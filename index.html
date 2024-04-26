@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- header navbar  -->
+    <header class="header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <div class="navLogo">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+
+                </div>
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered fa-2x"></i>
+                </button>
+
+                <div class="collapse navbar-collapse  justify-content-center navLinks" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:;">
+                                <i class="fa-solid fa-film"></i>
+                                Movies
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-tv"></i>
+                                TV Shows
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-user-group"></i>
+                                Celebs
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="div float-right">
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse  justify-content-end addButton" id="navbarSupportedContent">
+                    <button id="showMovieModel" class="btn btn-danger">Add Movie</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- carousel section -->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        
+        <div class="carousel-inner" id="carouselContainer">
+          <div class="carousel-item active">
+            <img src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <div id="slideInfo" class="info">
+                <h1>Spider-Man: Homecoming (2017)</h1>
+                <button id="trailerBtn" onclick="onTrailerBtn()" class="btn btn-danger">Watch Trailer</button>
+              </div>
+            </div>
+          </div>        
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+
+    <!-- Cards Section -->
+    <section class="cardSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cardSecHeading">
+                        <div class="h1 text-center text-white">Most Popular Movies</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="movieContainer">
+                <div class="col-md-4 mb-4" >
+                    <div class="card mt-4">
+                        <figure class="movieCard mb-0">
+                            <div class="movieImg">
+                                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg"
+                                    alt="img" title="img">
+                            </div>
+                            <figcaption>
+                                <div class="ratingSec text-white">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-6">
+                                            <div class="movieName">
+                                                <h3>Monkey Man</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="rating text-center">
+                                                <p>6</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overviewSec">
+                                    <h3>Monkey Man</h3>
+                                    <em>Overview</em>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellat
+                                        fugiat impedit vitae nemo nisi neque veritatis sed earum natus.</p>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-outline-success" >Edit</button>
+                                            <button type="button" class="btn btn-outline-danger" >Delete</button>
+                                        </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" >
+                    <div class="card mt-4">
+                        <figure class="movieCard mb-0">
+                            <div class="movieImg">
+                                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg"
+                                    alt="img" title="img">
+                            </div>
+                            <figcaption>
+                                <div class="ratingSec text-white">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-6">
+                                            <div class="movieName">
+                                                <h3>Monkey Man</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="rating text-center">
+                                                <p>6</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overviewSec">
+                                    <h3>Monkey Man</h3>
+                                    <em>Overview</em>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellat
+                                        fugiat impedit vitae nemo nisi neque veritatis sed earum natus.</p>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-outline-success" >Edit</button>
+                                            <button type="button" class="btn btn-outline-danger" >Delete</button>
+                                        </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" >
+                    <div class="card mt-4">
+                        <figure class="movieCard mb-0">
+                            <div class="movieImg">
+                                <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/4lhR4L2vzzjl68P1zJyCH755Oz4.jpg"
+                                    alt="img" title="img">
+                            </div>
+                            <figcaption>
+                                <div class="ratingSec text-white">
+                                    <div class="row">
+                                        <div class="col-md-9 col-sm-6">
+                                            <div class="movieName">
+                                                <h3>Monkey Man</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="rating text-center">
+                                                <p>6</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overviewSec">
+                                    <h3>Monkey Man</h3>
+                                    <em>Overview</em>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellat
+                                        fugiat impedit vitae nemo nisi neque veritatis sed earum natus.</p>
+                                        <div class="action">
+                                            <button type="button" class="btn btn-outline-success" >Edit</button>
+                                            <button type="button" class="btn btn-outline-danger" >Delete</button>
+                                        </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--trailerDrop, bacDrop, MovieModel -->
+    <div class="trailerDrop d-none" id="trailerDrop">
+        <div class="card">
+            <div class="card-header">
+                <i id="close" class="fa-regular fa-circle-xmark text-danger float-right"></i>
+            </div>
+            <div class="card-body">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rk-dF1lIbIg?si=tvvSwnj6M5QaG-15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="backDrop d-none hideMovieModel" id="backDrop"></div>
+    <div class="movieModel d-none" id="movieModel">
+        <div class="card">
+            <div class="card-header">
+                Add Movie Details
+                <i class="fa-regular fa-circle-xmark float-right hideMovieModel"></i>
+            </div>
+            <div class="card-body">
+                <form id="movieForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input required type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl">Image URL</label>
+                        <input required type="text" class="form-control" id="imageUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="overview">Overview</label>
+                        <textarea required type="text" class="form-control" id="overview"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Ratings</label>
+                        <select required id="rating" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-outline-danger hideMovieModel">Cancel</button>
+                        <button type="submit" id="submitBtn" class="btn btn-outline-success float-right">Add Movie</button>
+                        <button type="button" id="updateBtn" class="btn btn-outline-success float-right d-none">Update Movie</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader d-none" id="loader">
+        <div class="spinner-border text-danger" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+    </div>
+
+    <div class="pegination">
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+    <!-- bac -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
